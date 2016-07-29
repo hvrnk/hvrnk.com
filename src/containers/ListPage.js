@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ListItemForm from '../components/ListItemForm';
-import { addItem } from '../actions/index';
+import { addItem } from '../actions/listActions';
 
 const ListPage = React.createClass({
   displayName: 'ListPage',
@@ -31,7 +31,7 @@ const ListPage = React.createClass({
 });
 
 function mapStateToProps(state) {
-  return { items: state.list.items };
+  return { items: state.list };
 }
 
 export default connect(mapStateToProps)(ListPage);

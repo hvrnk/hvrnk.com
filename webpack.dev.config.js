@@ -31,8 +31,12 @@ module.exports = {
         loader : 'url?prefix=font/&limit=10000'
       },
       {
-        test: /\.s?css$/,
-        loader: 'style!css!sass'
+        test: /\.scss$/,
+        loaders: [
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'sass'
+        ]
       },
       {
         test: /\.png/,

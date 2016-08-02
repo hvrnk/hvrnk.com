@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
-import { connect, pushState } from 'react-redux';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
-
+import Header from '../components/Header';
+import NavBar from '../components/NavBar';
 import '../assets/stylesheets/base.scss';
 
 const App = React.createClass({
@@ -10,6 +11,9 @@ const App = React.createClass({
   render() {
     return (
       <div>
+        <Header />
+        <NavBar />
+
         Welcome!
         {' '}
         <Link to='/list'>List Maker</Link>
@@ -24,12 +28,12 @@ const App = React.createClass({
   },
 
   propTypes: {
-    children: PropTypes.object.isRequired
+    children: PropTypes.object
   }
 });
 
-function select(state) {
+function mapStateToProps(state) {
   return state;
 }
 
-export default connect(select, { pushState })(App);
+export default connect(mapStateToProps)(App);

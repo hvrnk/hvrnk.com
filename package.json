@@ -1,5 +1,5 @@
 {
-  "name": "redux-starter",
+  "name": "hvrnk.com",
   "version": "1.0.0",
   "description": "Starter kit for Redux web apps",
   "main": "index.js",
@@ -64,5 +64,16 @@
     "webpack-dev-middleware": "^1.5.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hvrnk@github.com/hvrnk/hvrnk.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hvrnk/hvrnk.com/issues"
+  },
+  "homepage": "https://github.com/hvrnk/hvrnk.com#readme"
 }

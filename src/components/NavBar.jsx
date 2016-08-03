@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from '../assets/stylesheets/navBar.scss'
 
@@ -11,7 +12,14 @@ class NavBar extends React.Component {
         {
           isOpen &&
             <div styleName="container">
-              NAV IS OPEN!
+              <ul styleName="nav-list">
+                <li>
+                  <Link to ='/list'>List Maker</Link>
+                </li>
+                <li>
+                  <Link to='/about'>About</Link>
+                </li>
+              </ul>
             </div>
         }
       </div>

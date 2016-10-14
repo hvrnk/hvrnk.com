@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import CSSModules from 'react-css-modules';
-import styles from '../assets/stylesheets/navBar.scss'
+import { container, navList } from '../assets/styles/navBar';
+// import CSSModules from 'react-css-modules';
+// import styles from '../assets/stylesheets/navBar.scss'
 
 class NavBar extends React.Component {
   render() {
@@ -11,8 +12,8 @@ class NavBar extends React.Component {
       <div>
         {
           isOpen &&
-            <div styleName="container">
-              <ul styleName="nav-list">
+            <div style={container}>
+              <ul style={navList}>
                 <li>
                   <Link to ='/list'>List Maker</Link>
                 </li>
@@ -33,4 +34,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(CSSModules(NavBar, styles));
+export default connect(mapStateToProps)(NavBar);

@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-$font-family: "Open Sans", sans-serif;
+@import 'variables';
 
 .app-overlay {
   background-color: #000;
@@ -8,4 +7,13 @@ $font-family: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
   z-index: -1000;
+  margin: (-$body-vertical-padding) (-$body-horizontal-padding);
+}
+
+.content-container {
+  margin: 0;
+}
+
+.content-underlay {
+  background-color: #000;
 }

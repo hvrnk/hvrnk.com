@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-$font-family: "Open Sans", sans-serif;
+@import 'variables';
 
 html {
   height: 100%;
@@ -12,4 +11,10 @@ body {
   background-size: cover;
   background-position: left top;
   font-family: $font-family;
+  margin: 0;
+  padding: $body-vertical-padding $body-horizontal-padding;
+}
+
+h1 {
+  margin: 0;
 }

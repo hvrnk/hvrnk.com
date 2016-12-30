@@ -13,7 +13,10 @@ const App = React.createClass({
       <div>
         <div styleName="app-overlay"></div>
         <Header />
-        {this.props.children}
+        <div styleName="content-container">
+          {this.props.children}
+          <div styleName="content-underlay"></div>
+        </div>
       </div>
     );
   },

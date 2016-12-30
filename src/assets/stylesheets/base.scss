@@ -1,4 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+$font-family: "Open Sans", sans-serif;
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
-  color: #000;
-  margin: 25px;
+  color: #a9a6a6;
+  background: url('../images/campin copy.png') center center;
+  background-size: cover;
+  background-position: left top;
+  font-family: $font-family;
 }

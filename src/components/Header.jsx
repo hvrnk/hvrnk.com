@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import CSSModules from 'react-css-modules';
 import { bindActionCreators } from 'redux';
-import styles from '../assets/stylesheets/header.scss';
 import * as navActions from '../actions/navActions';
+import CSSModules from 'react-css-modules';
+import styles from '../assets/stylesheets/header.scss';
 
 class Header extends React.Component {
   render() {
@@ -11,6 +12,12 @@ class Header extends React.Component {
     return (
       <div styleName="container" onClick={toggleNav}>
         <h1 styleName="hvrnk">hvrnk</h1>
+        <div styleName="nav-container">
+          <Link to ='/' styleName="nav-link">Home</Link>
+          <Link to ='/about' styleName="nav-link">About</Link>
+          <Link to ='/contact' styleName="nav-link">Contact</Link>
+        </div>
+        <div styleName="transparent-overlay"></div>
       </div>
     )
   }

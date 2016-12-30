@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
-import NavBar from '../components/NavBar';
+import CSSModules from 'react-css-modules';
+import styles from '../assets/stylesheets/app.scss';
 import '../assets/stylesheets/base.scss';
 
 const App = React.createClass({
@@ -10,12 +11,8 @@ const App = React.createClass({
   render() {
     return (
       <div>
+        <div styleName="app-overlay"></div>
         <Header />
-        <NavBar />
-
-        Welcome!
-        <br /><br />
-
         {this.props.children}
       </div>
     );
@@ -30,4 +27,4 @@ function mapStateToProps(state) {
   return state;
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(CSSModules(App, styles));

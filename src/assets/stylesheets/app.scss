@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+$font-family: "Open Sans", sans-serif;
+
+.app-overlay {
+  background-color: #000;
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+}

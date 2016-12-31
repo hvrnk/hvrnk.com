@@ -1,18 +1,13 @@
 @import 'variables';
 
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   color: #a9a6a6;
   background: url('../images/campin copy.png') center center;
   background-size: cover;
   background-position: left top;
   font-family: $font-family;
+  width: 100%;
   margin: 0;
-  padding: $body-vertical-padding $body-horizontal-padding;
 }
 
 h1 {

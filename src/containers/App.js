@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import CSSModules from 'react-css-modules';
 import styles from '../assets/stylesheets/app.scss';
 import '../assets/stylesheets/base.scss';
@@ -10,13 +11,16 @@ const App = React.createClass({
 
   render() {
     return (
-      <div>
-        <div styleName="app-overlay"></div>
+      <div styleName="app-container">
+        <div styleName="app-underlay"></div>
         <Header />
         <div styleName="content-container">
-          {this.props.children}
+          <div styleName="content">
+            {this.props.children}
+          </div>
           <div styleName="content-underlay"></div>
         </div>
+        <Footer />
       </div>
     );
   },
